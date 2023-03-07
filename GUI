@@ -1,0 +1,506 @@
+
+package JavaRegistrationCrud;
+import java.util.Vector;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
+public class JavaRegistrationCrud extends javax.swing.JFrame {
+
+
+
+    
+    public JavaRegistrationCrud() {
+        initComponents();
+    }
+
+   
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jtxtName = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jtxtPeripheralName = new javax.swing.JTextField();
+        jtxtPeripheralType = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jtxtId = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jbtnAdd = new javax.swing.JButton();
+        jbtnEdit = new javax.swing.JButton();
+        jbtnDelete = new javax.swing.JButton();
+        jbtnReset = new javax.swing.JButton();
+        jbtnExit = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(51, 51, 255));
+
+        jPanel1.setBackground(new java.awt.Color(44, 62, 80));
+
+        jPanel2.setBackground(new java.awt.Color(248, 148, 6));
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        jLabel1.setText(" Hardware Registration System");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jLabel1)
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+
+        jPanel3.setBackground(new java.awt.Color(44, 62, 80));
+
+        jPanel5.setBackground(new java.awt.Color(44, 62, 80));
+        jPanel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+
+        jtxtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtxtName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtNameActionPerformed(evt);
+            }
+        });
+
+        jTable1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                " Name", "Per. Name", "Per. Type", "Id Code"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jTable1.setPreferredSize(new java.awt.Dimension(100, 64));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        jtxtPeripheralName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
+        jtxtPeripheralType.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Registration Form");
+
+        jtxtId.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtxtId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtIdActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(236, 240, 241));
+        jLabel5.setText("Peripheral Name");
+
+        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(236, 240, 241));
+        jLabel6.setText("Name");
+
+        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(236, 240, 241));
+        jLabel7.setText("Peripheral Type");
+
+        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(236, 240, 241));
+        jLabel8.setText("Id Code");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(32, 32, 32)
+                                .addComponent(jtxtId, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jtxtPeripheralName, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(32, 32, 32)
+                                .addComponent(jtxtName, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(32, 32, 32)
+                                .addComponent(jtxtPeripheralType, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 95, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(223, 223, 223))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtxtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtxtPeripheralName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtxtPeripheralType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtxtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel4.setBackground(new java.awt.Color(44, 62, 80));
+        jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+
+        jbtnAdd.setBackground(new java.awt.Color(248, 148, 6));
+        jbtnAdd.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jbtnAdd.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnAdd.setText("Add");
+        jbtnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnAddActionPerformed(evt);
+            }
+        });
+
+        jbtnEdit.setBackground(new java.awt.Color(248, 148, 6));
+        jbtnEdit.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jbtnEdit.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnEdit.setText("Edit");
+        jbtnEdit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbtnEditMouseClicked(evt);
+            }
+        });
+        jbtnEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnEditActionPerformed(evt);
+            }
+        });
+
+        jbtnDelete.setBackground(new java.awt.Color(248, 148, 6));
+        jbtnDelete.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jbtnDelete.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnDelete.setText("Delete");
+        jbtnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnDeleteActionPerformed(evt);
+            }
+        });
+
+        jbtnReset.setBackground(new java.awt.Color(248, 148, 6));
+        jbtnReset.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jbtnReset.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnReset.setText("Reset");
+        jbtnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnResetActionPerformed(evt);
+            }
+        });
+
+        jbtnExit.setBackground(new java.awt.Color(255, 51, 51));
+        jbtnExit.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jbtnExit.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnExit.setText("Exit");
+        jbtnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnExitActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbtnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jbtnAdd)
+                .addGap(45, 45, 45)
+                .addComponent(jbtnEdit)
+                .addGap(45, 45, 45)
+                .addComponent(jbtnDelete)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addComponent(jbtnReset)
+                .addGap(42, 42, 42)
+                .addComponent(jbtnExit)
+                .addGap(21, 21, 21))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        pack();
+        setLocationRelativeTo(null);
+    }// </editor-fold>                        
+
+ private JFrame frame;
+    private void jbtnExitActionPerformed(java.awt.event.ActionEvent evt) {                                         
+       frame = new JFrame("Exit");
+       if(JOptionPane.showConfirmDialog(frame, "Do you want to exit?","Exit",
+               JOptionPane.YES_NO_OPTION)==JOptionPane.YES_OPTION) 
+       {
+           System.exit(0);
+       }
+       
+    }                                        
+
+    private void jtxtNameActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+    }                                        
+
+    private void jbtnResetActionPerformed(java.awt.event.ActionEvent evt) {                                          
+      jtxtName.setText("");
+      jtxtPeripheralName.setText("");
+      jtxtPeripheralType.setText("");
+      jtxtId.setText("");
+    }                                         
+
+    private void jbtnAddActionPerformed(java.awt.event.ActionEvent evt) {                                        
+      if(jtxtName.getText().equals("") || jtxtPeripheralName.getText().equals("") || jtxtPeripheralType.getText().equals("")
+             || jtxtId.getText().equals("") ) {
+      
+          JOptionPane.showMessageDialog(this,"Please Enter all the data");
+      }else{
+      String data[] = {jtxtName.getText(),jtxtPeripheralName.getText(),jtxtPeripheralType.getText(),jtxtId.getText()} ;
+     
+      DefaultTableModel dt = (DefaultTableModel) jTable1.getModel();
+      dt.addRow(data);
+      JOptionPane.showMessageDialog(this,"Added Successfully");
+      jtxtName.setText("");
+      jtxtPeripheralName.setText("");
+      jtxtPeripheralType.setText("");
+      jtxtId.setText("");
+      }
+    }                                       
+
+    private void jbtnDeleteActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        DefaultTableModel dt = (DefaultTableModel) jTable1.getModel();
+        int selectedRows = jTable1.getSelectedRow();
+        
+        if (jTable1.getSelectedRowCount() == 1) {
+        dt.removeRow(jTable1.getSelectedRow());
+        
+        JOptionPane.showMessageDialog(this,"Delete Successfully");
+        } else{
+        JOptionPane.showMessageDialog(this,"Please choice to Delete");}
+    }                                          
+
+    private void jbtnEditActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+    }                                        
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {                                     
+         DefaultTableModel dt = (DefaultTableModel) jTable1.getModel();
+         int selectedRows = jTable1.getSelectedRow();
+         
+         String dtName = (String)dt.getValueAt(jTable1.getSelectedRow(), 1).toString();
+         String dtPeripheralName = (String) dt.getValueAt(jTable1.getSelectedRow(), 2).toString();
+         String dtPeripheralType = (String)dt.getValueAt(jTable1.getSelectedRow(), 3).toString();
+         String dtId = (String) dt.getValueAt(jTable1.getSelectedRow(), 4).toString();
+         
+         jtxtName.setText(dtName);
+         jtxtPeripheralName.setText(dtPeripheralName);
+         jtxtPeripheralType.setText(dtPeripheralType);
+         jtxtId.setText(dtId);
+    }                                    
+
+    private void jbtnEditMouseClicked(java.awt.event.MouseEvent evt) {                                      
+        DefaultTableModel dt = (DefaultTableModel) jTable1.getModel();
+        
+        if (jTable1.getSelectedRowCount() == 1) {
+            String name = jtxtName.getText();
+            String peripheralname = jtxtPeripheralName.getText();
+            String peripheraltype = jtxtPeripheralType.getText();
+            String idcode = jtxtId.getText();
+            
+            dt.setValueAt(name, jTable1.getSelectedRow(), 0);
+            dt.setValueAt(peripheralname, jTable1.getSelectedRow(), 1);
+            dt.setValueAt(peripheraltype, jTable1.getSelectedRow(), 2);
+            dt.setValueAt(idcode, jTable1.getSelectedRow(), 3);
+            
+            JOptionPane.showMessageDialog(this,"Update Successfully");
+        }else{
+            
+        if(jTable1.getRowCount() == 0 ) {
+            
+           JOptionPane.showMessageDialog(this, "The Table is Empty!."); 
+        }else{
+                JOptionPane.showMessageDialog(this, "Please Select To Edit"); 
+    }
+        }
+    }                                     
+
+    private void jtxtIdActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        // TODO add your handling code here:
+    }                                      
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(JavaRegistrationCrud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(JavaRegistrationCrud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(JavaRegistrationCrud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(JavaRegistrationCrud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new JavaRegistrationCrud().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JButton jbtnAdd;
+    private javax.swing.JButton jbtnDelete;
+    private javax.swing.JButton jbtnEdit;
+    private javax.swing.JButton jbtnExit;
+    private javax.swing.JButton jbtnReset;
+    private javax.swing.JTextField jtxtId;
+    private javax.swing.JTextField jtxtName;
+    private javax.swing.JTextField jtxtPeripheralName;
+    private javax.swing.JTextField jtxtPeripheralType;
+    // End of variables declaration                   
+}
